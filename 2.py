@@ -5,7 +5,7 @@ for line in open("2.txt"):
     a = [int(s) for s in line.split()]
     running_sum += max(a) - min(a)
 
-print running_sum
+print(running_sum)
 
 running_sum = 0
 for line in open("2.txt"):
@@ -15,4 +15,4 @@ for line in open("2.txt"):
             running_sum += max(pair) / min(pair)
             break
 
-print running_sum
+print(running_sum)
