@@ -13,7 +13,7 @@ itertools	../2.py	/^import itertools$/;"	kind:namespace	line:2
 last	../1.py	/^    last = d$/;"	kind:variable	line:8
 last	../1.py	/^last = digits[-1]$/;"	kind:variable	line:3
 numbers	../2.py	/^    numbers = [int(s) for s in line.split()]$/;"	kind:variable	line:12
+running_sum	../1.py	/^running_sum = 0$/;"	kind:variable	line:11
+running_sum	../1.py	/^running_sum = 0$/;"	kind:variable	line:4
 running_sum	../2.py	/^running_sum = 0$/;"	kind:variable	line:10
 running_sum	../2.py	/^running_sum = 0$/;"	kind:variable	line:3
-sum	../1.py	/^sum = 0$/;"	kind:variable	line:11
-sum	../1.py	/^sum = 0$/;"	kind:variable	line:4
