@@ -1,4 +1,4 @@
-"""Solutions for AOC Day 3"""
+"""Solutions for AOC Day 4"""
 import math
 import numpy
 import itertools
