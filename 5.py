@@ -6,10 +6,6 @@ import itertools
 
 def sol_1():
     """Solution to #1"""
-    a = []
-    for line in open("5.txt"):
-        a.append(int(line))
-
     jumps = 0
     index = 0
     while True:
@@ -23,12 +19,8 @@ def sol_1():
     return False
 
 
-def sol_2():
+def sol_2(a):
     """Solution to #2"""
-    a = []
-    for line in open("5.txt"):
-        a.append(int(line))
-
     jumps = 0
     index = 0
     while True:
@@ -46,5 +38,8 @@ def sol_2():
 
 
 if __name__ == "__main__":
-    print sol_1()
-    print sol_2()
+    a = []
+    for line in open("5.txt"):
+        a.append(int(line))
+    print sol_1(a)
+    print sol_2(a)
