@@ -11,7 +11,8 @@ OPERATORS = {
 }
 
 
-def sol_1(lines):
+def solution(lines):
+    """Solution to both the first and second problems"""
     max_value_ever = 0
     registers = {}
     for line in lines:
@@ -36,11 +37,7 @@ def sol_1(lines):
             if registers[register] > max_value_ever:
                 max_value_ever = registers[register]
 
-    values = []
-    for key, value in registers.iteritems():
-        values.append(value)
-    return max(values), max_value_ever
+    return max(registers.iteritems(), key=operator.itemgetter(1))[1], max_value_ever
 
 if __name__ == "__main__":
-    max_value, max_value_ever = sol_1([l for l in open("8.txt")])
-    print max_value, max_value_ever
+    print solution([l for l in open("8.txt")])
