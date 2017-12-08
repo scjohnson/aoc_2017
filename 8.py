@@ -34,8 +34,7 @@ def solution(lines):
 
         if OPERATORS[conditional](registers[cond_register], conditional_value):
             registers[register] += change
-            if registers[register] > max_value_ever:
-                max_value_ever = registers[register]
+            max_value_ever = max(registers[register], max_value_ever)
 
     return max(registers.iteritems(), key=operator.itemgetter(1))[1], max_value_ever
 
