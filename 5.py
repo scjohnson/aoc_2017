@@ -4,7 +4,7 @@ import numpy
 import itertools
 
 
-def sol_1():
+def sol_1(a):
     """Solution to #1"""
     jumps = 0
     index = 0
@@ -42,4 +42,7 @@ if __name__ == "__main__":
     for line in open("5.txt"):
         a.append(int(line))
     print sol_1(a)
+    a = []
+    for line in open("5.txt"):
+        a.append(int(line))
     print sol_2(a)
