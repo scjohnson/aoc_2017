@@ -31,7 +31,7 @@ def knot_hash(sparse):
     kh = ''
     for s in sparse:
         h = hex(s)
-        if len(h) == 3:
+        if len(h) == 4:
             kh += ('0')
         kh += (hex(s)[2:-1])
     return kh
@@ -43,6 +43,7 @@ def solution_2(num_elements, lengths):
     skip = 0
     for _ in xrange(64):
         a, pos, skip = convert(a, lengths, pos, skip)
+    a = numpy.append(a[-pos%num_elements:], a[0:-pos%num_elements:])
     sparse = sparse_hash(a)
     kh = knot_hash(sparse)
     return kh
@@ -56,4 +57,7 @@ if __name__ == "__main__":
     converted = numpy.append(converted, [17, 31, 73, 47, 23])
     assert sparse_hash(
         [65, 27, 9, 1, 4, 3, 40, 50, 91, 7, 6, 0, 2, 5, 68, 22])[0] == 64
-    print solution_2(256, converted)
+    print "Solution 2 : ", solution_2(256, converted)
+    converted = numpy.empty([0], dtype=int)
+    converted = numpy.append(converted, [17, 31, 73, 47, 23])
+    assert solution_2(256, converted) == 'a2582a3a0e66e6e86e3812dcb672a272'
