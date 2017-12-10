@@ -22,12 +22,12 @@ def solution_1(num_elements, lengths):
     return a[-pos % num_elements] * a[(-pos + 1) % num_elements]
 
 
-def sparse_hash(a):
+def sparse_hash(arr):
     """Convert array into hash"""
-    b = []
-    for i in xrange(len(a) / 16):
-        b.append(reduce(operator.xor, a[i * 16:(i + 1) * 16]))
-    return b
+    barr = []
+    for i in xrange(len(arr) / 16):
+        barr.append(reduce(operator.xor, arr[i * 16:(i + 1) * 16]))
+    return barr
 
 
 def knot_hash(sparse):
@@ -51,6 +51,7 @@ def solution_2(num_elements, lengths):
     arr = numpy.append(arr[-pos % num_elements:], arr[0:-pos % num_elements:])
     sparse = sparse_hash(arr)
     return knot_hash(sparse)
+
 
 def test_all():
     """test some"""
