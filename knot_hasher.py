@@ -1,3 +1,4 @@
+"""Our knot hashing algorithm"""
 import numpy
 import operator
 
@@ -46,6 +47,7 @@ def hasher(num_elements, lengths):
 
 
 def hash_string(string_to_hash):
+    """Return the hash for this string"""
     converted = [ord(h) for h in string_to_hash]
     converted = numpy.append(converted, [17, 31, 73, 47, 23])
     return hasher(256, converted)

@@ -1,5 +1,4 @@
 """Solutions for AOC Day 14"""
-import binascii
 import numpy
 import scipy.ndimage
 
@@ -23,11 +22,10 @@ def solution(puzzle_input):
             im[i, j] = int(b)
 
     # cheat:
-    blobs, number_of_blobs = scipy.ndimage.label(im)
+    _, number_of_blobs = scipy.ndimage.label(im)
 
     return total, number_of_blobs
 
 
 if __name__ == "__main__":
-    puzzle_input = "jzgqcdpd"
-    print solution(puzzle_input)
+    print solution("jzgqcdpd")
