@@ -24,7 +24,7 @@ def solution_2():
     delay = 0
     while True:
         for i in range(97):
-            if scanner[i] != 0 and (i+delay) % (2 * (scanner[i] - 1)) == 0:
+            if scanner[i] != 0 and (i + delay) % (2 * (scanner[i] - 1)) == 0:
                 break
             if i == 96:
                 return delay
