@@ -39,7 +39,5 @@ def solution_1(a_start=512, b_start=191):
     return score
 
 if __name__ == "__main__":
-    print "Solution 1 ":
-        solution_1()
-    print "Solution 2 ":
-        solution_2()
+    print "Solution 1 :", solution_1()
+    print "Solution 2 :", solution_2()
