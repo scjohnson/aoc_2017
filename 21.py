@@ -52,10 +52,8 @@ def solution(file_name, steps):
                         for sm_i, c in enumerate(row):
                             new_image[4 * i + sm_i, 4 * j + sm_j] = c
             image = new_image
-        print "(step, count)", (step, np.count_nonzero(new_image == '#'))
 
     return np.count_nonzero(new_image == '#')
 
 if __name__ == "__main__":
-    print "Solution 1: ", solution("test.txt", 2)
-    print "Solution 1: ", solution("21.txt", 18)  # 216 too high
+    print "Solution 1: ", solution("21.txt", 18)

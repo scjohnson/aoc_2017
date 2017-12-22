@@ -80,8 +80,5 @@ def solution(file_name):
 
 
 if __name__ == "__main__":
-    print "Solution 1: ", solution("test.txt")  # 5587
     print "Solution 1: ", solution("22.txt")  # 5411
-    print "Solution 2: ", solution2("test.txt", 100)
-    print "Solution 2: ", solution2("test.txt", 10000000)
     print "Solution 2: ", solution2("22.txt")
